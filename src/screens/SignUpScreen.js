@@ -18,7 +18,7 @@ class SignUpScreen extends Component {
                 <View style={{ height: 30 }} />
 
                 {/*Sign in form*/}
-                <Content>
+                {/* <Content>  */}
                     <Form>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <View style={{ paddingLeft: 35 }}>
@@ -32,23 +32,27 @@ class SignUpScreen extends Component {
                         <View style={{ height: 10 }} />
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 12 }}>
-                        {/* <Button style={{ width: 160, height: 33, borderWidth: 1, backgroundColor: 'white', borderColor: '#EB5757', borderRadius: 20 }} /> */}
-
-                            <Item style = {{ width: 160, height: 33, borderWidth: 1, backgroundColor: 'white', borderColor: '#EB5757', borderRadius: 20 }}>
-                                <Input  keyboardType="email-address" value={this.state.email} placeholderTextColor="#85878B" autoCapitalize={'none'} ref="input1" onSubmitEditing={() => { this.refs.input2._root.focus() }} onChangeText={(text) => { this.setState({ email: text }) }} returnKeyType={'next'} />
+                        <Item rounded style={{width:160, height:35, borderColor:'#EB5757', borderWidth:1}}>
+                                <Input/>
                             </Item>
-                            <View style={{}}>
-                                <Button style={{ width: 160, height: 33, borderWidth: 1, backgroundColor: 'white', borderColor: '#EB5757', borderRadius: 20 }} Button />
-                            </View>
+                            <Item rounded style={{width:160, height:35, borderColor:'#EB5757', borderWidth:1}}>
+                                <Input/>
+                            </Item>
+
                         </View>
                     </Form>
-                    <View>
-                        
-                    </View>
-                    <Button style={{ width: 160, height: 33, borderWidth: 1, backgroundColor: 'white', borderColor: '#EB5757', borderRadius: 20 }} />
 
-                    
-                </Content>
+                    <View style={{ height: 10 }} />
+
+                    <View style={{paddingTop:460, paddingRight: 16, alignSelf:'center'}}>
+                    <Button style={{width:120, backgroundColor:'#EB5757', paddingLeft:45}} onPress={()=>{this.props.navigation.navigate('Login')}}>
+                        <Text style={[styles.textCenterWhite, {alignSelf:'center'}]}>Next</Text>
+                    </Button>
+                    </View>
+
+
+
+                {/* </Content> */}
 
             </Container>
         );
@@ -63,7 +67,11 @@ const styles = {
     },
     padLeft: {
         paddingLeft: 12,
+    },
+    textCenterWhite:{
+        color: 'white',
     }
+
 };
 
 export default SignUpScreen;

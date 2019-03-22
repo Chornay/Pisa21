@@ -1,22 +1,31 @@
-import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import React, {Component} from 'react';
 
-class AppStyle extends Component {
-   render() {
-       return (
-           <View style={styles.container}>
-               <Text>AppStyle</Text>
-           </View>
-       );
-   }
+class AppStyle {
+
+  static tintColor = 'red';
+  static mainColor = 'red';
+
+  static activeTabColor = 'red';
+  static inactiveTabColor = 'red';
+
+  static navigationBarColor = '#6AD2BA';
+
+  static tableViewBackground = 'red';
+
+  static styles = {
+
+    headerFont: {
+      fontSize: 20,
+    },
+
+    input: {
+      marginLeft:8,
+      marginRight:8,
+    }
+    
+  }  
+
 }
 
-const styles = {
-   container: {
-       flex: 1,
-       justifyContent: 'center',
-       alignItems: 'center',
-   },
-};
 
 export default AppStyle;
