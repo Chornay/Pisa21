@@ -15,6 +15,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  // **** For map
+  [GMSServices provideAPIKey:@"AIzaSyBd-RcOJbD76-sU0HiWpwPtaY8ViCFhH44"]; // add this line using the api key obtained from Google Console api key obtained from Google Console
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"Pisa21"
